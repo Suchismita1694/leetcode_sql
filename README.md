@@ -37,7 +37,7 @@ select email
 from person
 having count(email) > 1
 ```
-#511. Game Play Analysis I
+# 511. Game Play Analysis I
 ```
 with cte as 
 (select player_id, event_date as first_login,
@@ -87,7 +87,7 @@ select product_id, 'store3' as store, store3 as price
 from products
 where store3 is not null
 ```
-#1890. The Latest Login in 2020
+# 1890. The Latest Login in 2020
 ```
 with cte as 
 (select user_id, time_stamp as last_stamp,
