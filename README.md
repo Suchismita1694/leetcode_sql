@@ -98,3 +98,19 @@ from cte
 where rnk = 2
 and last_stamp like '%2020%';
 ```
+# 1158. Market Analysis I
+```
+select u.user_id as Buyer_id, u.join_date, count(o.order_id) as orders_in_2019
+from users u
+left join orders o
+on u.user_id = o.buyer_id
+and o.order_date >= '2019-01-01'
+group by u.user_id
+```
+# 1393. Capital Gain/Loss
+```
+select stock_name, 
+sum(case when operation = "sell" then price else -price end) as capital_gain_loss
+from stocks
+group by stock_name
+```
