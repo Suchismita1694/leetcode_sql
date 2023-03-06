@@ -114,3 +114,9 @@ sum(case when operation = "sell" then price else -price end) as capital_gain_los
 from stocks
 group by stock_name
 ```
+# 1667. Fix Names in a Table
+```
+select user_id, concat(upper(substring(name,1,1)), lower(substring(name,2))) as name
+from users
+order by user_id
+```
